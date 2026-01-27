@@ -2,9 +2,9 @@
 // Function to generate the HTML for each card
 // --- DATA SOURCE ---
 const projects = [
-    { roll: "22384108", name: "Gokul", topic: "SJF Scheduling", type: "blog", url: "https://aeroslayys.github.io/Gokul/" },
-    { roll: "12", name: "Priya Das", topic: "Banker's Algorithm Guide", type: "video", url: "#" },
-    { roll: "45", name: "Rahul V.", topic: "Memory Management Podcast", type: "audio", url: "#" },
+    { roll: "22384108", name: "Gokul", topic: "SJF Scheduling", type: "Websites", url: "https://aeroslayys.github.io/Gokul/" },
+    { roll: "22384126", name: "Viswapriya R", topic: "Security Features in OS", type: "Websites", url: "https://priya14765.github.io/Digital-Security/" },
+    { roll: "22384125, 22384112", name: "Vishnupriya SV and Leeladevi M", topic: "Modern Operating Systems", type: "Websites", url: "" },
     // Add more here from WhatsApp
 ];
 
@@ -26,7 +26,7 @@ function renderCards(data) {
         const themes = {
             video: 'from-blue-500 to-cyan-400 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]',
             audio: 'from-purple-500 to-pink-400 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.4)]',
-            blog: 'from-emerald-500 to-teal-400 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]'
+            Websites: 'from-emerald-500 to-teal-400 group-hover:shadow-[0_0_20px_rgba(16,185,129,0.4)]'
         };
         
         const glowClass = themes[item.type] || 'from-slate-500 to-slate-400';
