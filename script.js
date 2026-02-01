@@ -5,7 +5,7 @@ const projects = [
     { roll: "22384108", name: "Gokul", topic: "SJF Scheduling", type: "Websites", url: "https://aeroslayys.github.io/Gokul/" },
     { roll: "22384126", name: "Viswapriya R", topic: "Security Features in OS", type: "Websites", url: "https://priya14765.github.io/Digital-Security/" },
     { roll: "22384125,22384112", name: "Vishnupriya SV and Leeladevi M", topic: "Modern Operating Systems", type: "Websites", url: "" },
-    { roll: "22384107", name: "Fuad PP", topic: "Deadlock & Banker's Algorithm", type: "Websites", url: "" },
+    { roll: "22384107", name: "Fuad PP", topic: "Deadlock & Banker's Algorithm", type: "Websites", url: "https://fuad1817.github.io/Understanding-Deadlock/" },
 
     // Add more here from WhatsApp
 ];
