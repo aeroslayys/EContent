@@ -19,7 +19,7 @@ const projects = [
         name: "Vishnupriya SV and Leeladevi M", 
         topic: "Modern Operating Systems", 
         type: "Websites", 
-        links: [{ label: "Launch Project", url: "#" }] 
+        links: [{ label: "Launch Project", url: "https://leela-29.github.io/os-nexus/E%20content/" }] 
     },
     { 
         roll: "22384107", 
