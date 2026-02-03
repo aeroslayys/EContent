@@ -35,7 +35,7 @@ const projects = [
         type: "video", 
         links: [
             { label: "Watch Video", url: "https://youtube.com/watch?v=BdTvhPQxVUw&feature=shared" },
-            { label: "View GitHub Project", url: "https://github.com/greyyy123/round-robin-project" }
+            { label: "Launch Website", url: "https://roundrobinn.lovable.app/" }
         ] 
     },
   
