@@ -43,8 +43,8 @@ const projects = [
         roll: "22384115, 22384120", 
         name: "Shreya and Rifath", 
         topic: "Page Replacement", 
-        type: "PPT", 
-        links: [{ label: "Open Presentation", url: "https://docs.google.com/presentation/d/1-qMFlePYHmQy7YV_gJuxqja36bVNlmHb/edit?usp=drivesdk&ouid=115351426755177367618&rtpof=true&sd=true" }] 
+        type: "Websites", 
+        links: [{ label: "Launch Project", url: "hhttps://priya14765.github.io/Page-Replacement/" }] 
     },
         { 
         roll: "22384117, 22384109", 
@@ -53,6 +53,20 @@ const projects = [
         type: "video", 
         links: [{ label: "Launch Project", url: "https://youtu.be/S8Bhs0wP0l8?si=9l5M2urVQmaN_aJJ" }] 
     },
+    { 
+        roll: "21384130", 
+        name: "Vidhyshree S", 
+        topic: "Multitasking and Multithreading", 
+        type: "Websites", 
+        links: [{ label: "Launch Project", url: "https://priya14765.github.io/Multitasking-and-Multithreading/" }] 
+    },
+        { 
+        roll: "22384121", 
+        name: "Boda Kaveri and Arthi", 
+        topic: "Disk Scheduling Algorithms", 
+        type: "Websites", 
+        links: [{ label: "Launch Project", url: "https://bodakaveri8.blogspot.com/" }] 
+    }
 ];
 
 const grid = document.getElementById('contentGrid');
