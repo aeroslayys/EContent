@@ -1,8 +1,8 @@
 // --- DATA SOURCE ---
 const projects = [
     { 
-        roll: "22384108", 
-        name: "Gokul", 
+        roll: "22384108, 21384109", 
+        name: "Gokul and Ealaf Shirin", 
         topic: "SJF Scheduling", 
         type: "Websites", 
         links: [{ label: "Launch Project", url: "https://aeroslayys.github.io/Gokul/" }] 
