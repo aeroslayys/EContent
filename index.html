@@ -1,35 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OS Class Repository</title>
+    <title>OS Content Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,600;0,900;1,400&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#0b0f1a] text-white min-h-screen"></body>
+<body class="min-h-screen">
 
     <div class="max-w-6xl mx-auto px-6 py-12">
-        <header class="text-center mb-16">
-            <h1 class="text-5xl font-extrabold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent mb-4">
-                OS CONTENT HUB
-            </h1>
-            <p class="text-slate-400 text-lg">Operating Systems E-Contents</p>
-        </header>
 
-        <div class="flex flex-col md:flex-row gap-4 mb-12">
-            <input type="text" id="searchInput" placeholder="Search topics..." 
-                class="flex-grow bg-[#161b2a] border border-slate-800 p-4 rounded-2xl focus:ring-2 focus:ring-blue-500 outline-none transition-all">
-            <select id="typeFilter" class="bg-[#161b2a] border border-slate-800 p-4 rounded-2xl outline-none text-slate-300">
-                <option value="all">All Formats</option>
-                <option value="video">Video</option>
-                <option value="audio">Audio</option>
-                <option value="Websites">Websites</option>
-                <option value="PPT">PPT</option>
-            </select>
+        <!-- Theme toggle -->
+        <div class="top-bar">
+            <button class="theme-toggle" id="themeBtn" onclick="toggleTheme()">
+                <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <span id="themeBtnLabel">Light mode</span>
+            </button>
         </div>
 
-        <div id="contentGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
+        <!-- Header -->
+        <header class="text-center mb-14">
+            <h1 class="mb-4">OS Content Hub</h1>
+            <p class="text-lg" style="color: var(--text-secondary); letter-spacing: 0.04em;">Operating Systems E-Contents</p>
+        </header>
+
+        <!-- Controls -->
+        <div class="controls-row">
+            <!-- Search -->
+            <div class="search-wrap">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search by topic, name, or roll number...">
+            </div>
+
+            <!-- Type filter chips -->
+            <div class="filter-chips">
+                <span class="filter-label">Format</span>
+                <button class="chip active" data-type="all" onclick="setFilter(this)">
+                    All
+                </button>
+                <button class="chip" data-type="video" onclick="setFilter(this)">
+                    <span class="chip-dot" style="background: #3b82f6;"></span>
+                    Video
+                </button>
+                <button class="chip" data-type="audio" onclick="setFilter(this)">
+                    <span class="chip-dot" style="background: #a855f7;"></span>
+                    Audio
+                </button>
+                <button class="chip" data-type="Websites" onclick="setFilter(this)">
+                    <span class="chip-dot" style="background: #10b981;"></span>
+                    Websites
+                </button>
+                <button class="chip" data-type="PPT" onclick="setFilter(this)">
+                    <span class="chip-dot" style="background: #f97316;"></span>
+                    PPT
+                </button>
+            </div>
+
+            <!-- Sort + results count -->
+            <div class="sort-row">
+                <span class="sort-label">Sort</span>
+                <select class="sort-select" id="sortSelect" onchange="performFilter()">
+                    <option value="default">Default order</option>
+                    <option value="az">Topic A → Z</option>
+                    <option value="za">Topic Z → A</option>
+                    <option value="type">By format</option>
+                </select>
+                <span class="results-count" id="resultsCount"></span>
+            </div>
+        </div>
+
+        <!-- Content Grid -->
+        <div id="contentGrid" class="grid grid-cols-1 md:grid-cols-3 gap-6"></div>
     </div>
 
     <script src="script.js"></script>
